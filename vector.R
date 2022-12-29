@@ -81,3 +81,65 @@ d.20 = d[1:20]
 d.20
 d.20[-5]
 d.20[-c(5,7,9)]
+
+#벡터의 연산
+ # 각각의 원소에 계산됨
+d <- c(1,4,3,7,8)
+2*d
+d-5
+3*d+4
+
+#벡터의 연결
+
+x <- c(1,2,3)
+y <- c(4,5)
+c(x,y)
+z<-c(x,y)
+z
+
+x<- c(1,2,3)
+y<- c(4,5,6)
+x+y
+x-y
+x/y
+z<-x+y
+z
+
+#벡터의 계산 명령어
+
+d<-c(1,2,3,4,5,6,7,8,9,10)
+sum(d)
+sum(2*d)
+length(d)
+mean(d[1:5])
+max(d)
+min(d)
+sort(d) # 오름차순
+sort(d, decreasing = FALSE) # 오름차순
+sort(d, decreasing = TRUE) # 내림차순
+
+v1 <- median(d)
+v1
+v2 <- sum(d)/length(d)
+v2
+
+# 함수 
+
+ # 함수, 매개변수의 정확한 명칭을 사용해야 함 
+v1 <- c(4,2,3,1,6,10,8,9)
+
+sort(x = v1,decreasing = TRUE) # 메개변수 이름, 값, 함수
+sort(v1,FALSE) # 매개변수 값만 준 경우
+sort(v1)
+
+# 논리연산자
+
+d <- c(1,2,3,4,5,6,7,8,9)
+d>=5 #FALSE FALSE FALSE FALSE TRUE TRUE TRUE TRUE TRUE
+d[d>5]
+sum(d>5)  # 5보다 큰 값의 개수를 출력
+sum(d[d>5]) # 5보다 큰 값의 합계를 출력
+d==5
+
+condi <- d > 5 & d < 8
+d[condi]
